@@ -1,6 +1,6 @@
 describe('Wallet Management', () => {
   beforeEach(() => {
-    cy.login('testuser', 'password');
+    cy.login();
   });
 
   it('should allow user to create a new wallet', () => {
