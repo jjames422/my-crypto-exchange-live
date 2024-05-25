@@ -1,0 +1,186 @@
+.
+├── .env.local
+├── .eslintrc.json
+├── .gitignore
+├── .next
+│   ├── app-build-manifest.json
+│   ├── build-manifest.json
+│   ├── cache
+│   │   ├── swc
+│   │   │   └── plugins
+│   │   │       └── v7_linux_x86_64_0.106.15
+│   │   └── webpack
+│   │       ├── client-development
+│   │       │   ├── 0.pack.gz
+│   │       │   ├── 1.pack.gz
+│   │       │   ├── 2.pack.gz
+│   │       │   ├── 3.pack.gz
+│   │       │   ├── 4.pack.gz
+│   │       │   ├── 5.pack.gz
+│   │       │   ├── 6.pack.gz
+│   │       │   ├── 7.pack.gz
+│   │       │   ├── 8.pack.gz
+│   │       │   ├── index.pack.gz
+│   │       │   └── index.pack.gz.old
+│   │       ├── client-development-fallback
+│   │       │   ├── 0.pack.gz
+│   │       │   └── index.pack.gz.old
+│   │       └── server-development
+│   │           ├── 0.pack.gz
+│   │           ├── 1.pack.gz
+│   │           ├── 2.pack.gz
+│   │           ├── 3.pack.gz
+│   │           ├── 4.pack.gz
+│   │           ├── 5.pack.gz
+│   │           ├── 6.pack.gz
+│   │           ├── index.pack.gz
+│   │           └── index.pack.gz.old
+│   ├── package.json
+│   ├── react-loadable-manifest.json
+│   ├── server
+│   │   ├── app
+│   │   │   ├── api
+│   │   │   │   └── auth
+│   │   │   │       └── [...nextauth]
+│   │   │   │           └── route.js
+│   │   │   ├── favicon.ico
+│   │   │   │   └── route.js
+│   │   │   ├── login
+│   │   │   │   ├── page.js
+│   │   │   │   └── page_client-reference-manifest.js
+│   │   │   ├── page.js
+│   │   │   ├── page_client-reference-manifest.js
+│   │   │   └── register
+│   │   │       ├── page.js
+│   │   │       └── page_client-reference-manifest.js
+│   │   ├── app-paths-manifest.json
+│   │   ├── interception-route-rewrite-manifest.js
+│   │   ├── middleware-build-manifest.js
+│   │   ├── middleware-manifest.json
+│   │   ├── middleware-react-loadable-manifest.js
+│   │   ├── next-font-manifest.js
+│   │   ├── next-font-manifest.json
+│   │   ├── pages-manifest.json
+│   │   ├── server-reference-manifest.js
+│   │   ├── server-reference-manifest.json
+│   │   ├── vendor-chunks
+│   │   │   ├── @babel+runtime@7.24.6.js
+│   │   │   ├── @panva+hkdf@1.1.1.js
+│   │   │   ├── @swc+helpers@0.5.5.js
+│   │   │   ├── bcryptjs@2.4.3.js
+│   │   │   ├── cookie@0.5.0.js
+│   │   │   ├── jose@4.15.5.js
+│   │   │   ├── lru-cache@6.0.0.js
+│   │   │   ├── next-auth@4.24.7_next@14.2.3_react-dom@18.3.1_react@18.3.1__react@18.3.1__react-dom@18.3.1_react@18.3.1__react@18.3.1.js
+│   │   │   ├── next@14.2.3_react-dom@18.3.1_react@18.3.1__react@18.3.1.js
+│   │   │   ├── oauth@0.9.15.js
+│   │   │   ├── object-hash@2.2.0.js
+│   │   │   ├── oidc-token-hash@5.0.3.js
+│   │   │   ├── openid-client@5.6.5.js
+│   │   │   ├── preact-render-to-string@5.2.6_preact@10.22.0.js
+│   │   │   ├── preact@10.22.0.js
+│   │   │   ├── uuid@8.3.2.js
+│   │   │   └── yallist@4.0.0.js
+│   │   └── webpack-runtime.js
+│   ├── static
+│   │   ├── chunks
+│   │   │   ├── app
+│   │   │   │   ├── layout.js
+│   │   │   │   ├── login
+│   │   │   │   │   └── page.js
+│   │   │   │   ├── page.js
+│   │   │   │   └── register
+│   │   │   │       └── page.js
+│   │   │   ├── app-pages-internals.js
+│   │   │   ├── main-app.js
+│   │   │   ├── polyfills.js
+│   │   │   └── webpack.js
+│   │   ├── css
+│   │   │   └── app
+│   │   │       └── layout.css
+│   │   ├── development
+│   │   │   ├── _buildManifest.js
+│   │   │   └── _ssgManifest.js
+│   │   ├── media
+│   │   │   ├── 05a31a2ca4975f99-s.woff2
+│   │   │   ├── 513657b02c5c193f-s.woff2
+│   │   │   ├── 51ed15f9841b9f9d-s.woff2
+│   │   │   ├── c9a5bc6a7c948fb0-s.p.woff2
+│   │   │   ├── d6b16ce4a6175f26-s.woff2
+│   │   │   ├── ec159349637c90ad-s.woff2
+│   │   │   └── fd4db3eb5472fc27-s.woff2
+│   │   └── webpack
+│   │       ├── 1ffa356e70bc6748.webpack.hot-update.json
+│   │       ├── 52db81c0f2cfbe98.webpack.hot-update.json
+│   │       ├── 633457081244afec._.hot-update.json
+│   │       ├── app
+│   │       │   └── layout.52db81c0f2cfbe98.hot-update.js
+│   │       ├── webpack.1ffa356e70bc6748.hot-update.js
+│   │       └── webpack.52db81c0f2cfbe98.hot-update.js
+│   ├── trace
+│   └── types
+│       ├── app
+│       │   ├── api
+│       │   │   └── auth
+│       │   │       └── [...nextauth]
+│       │   │           └── route.ts
+│       │   ├── layout.ts
+│       │   ├── login
+│       │   │   └── page.ts
+│       │   ├── page.ts
+│       │   └── register
+│       │       └── page.ts
+│       └── package.json
+├── .swc
+│   └── plugins
+│       └── v7_linux_x86_64_0.106.15
+├── README.md
+├── __tests__
+│   ├── Greeting.test.js
+│   └── home.test.js
+├── app
+│   ├── api
+│   │   ├── auth
+│   │   │   ├── [...nextauth]
+│   │   │   │   └── route.js
+│   │   │   └── [...nextauth].js
+│   │   ├── register
+│   │   │   └── route.js
+│   │   └── wallets
+│   │       ├── [id]
+│   │       │   └── route.js
+│   │       └── route.js
+│   ├── favicon.ico
+│   ├── globals.css
+│   ├── layout.js
+│   ├── login
+│   │   └── page.js
+│   ├── page.js
+│   ├── register
+│   │   └── page.js
+│   ├── transactions
+│   │   └── page.js
+│   └── wallets
+│       └── page.js
+├── components
+│   ├── AuthGuard.js
+│   ├── Greeting.js
+│   └── SessionProviderWrapper.js
+├── file_tree.txt
+├── jest.config.js
+├── jest.setup.js
+├── jsconfig.json
+├── next.config.mjs
+├── package-lock.json
+├── package.json
+├── pnpm-lock.yaml
+├── postcss.config.mjs
+├── public
+│   ├── next.svg
+│   └── vercel.svg
+├── tailwind.config.js
+└── utils
+    ├── blockchain.js
+    └── logger.js
+
+54 directories, 129 files
