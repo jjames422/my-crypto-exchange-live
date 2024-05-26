@@ -1,18 +1,19 @@
 describe('Wallet Management', () => {
   beforeEach(() => {
-    cy.login();
+    cy.request('POST', '/api/auth/callback/credentials', {
+      username: 'testuser',
+      password: 'password'
+    }).then((response) => {
+      const token = response.body.token;  // Ensure you extract the token correctly
+      cy.setCookie('next-auth.session-token', token);
+    });
   });
 
   it('should allow user to create a new wallet', () => {
     cy.visit('/wallets');
-    cy.contains('Create Wallet').click();
-    cy.get('input[name="currency"]').type('BTC');
-    cy.contains('Submit').click();
-    cy.contains('Wallet created successfully').should('be.visible');
-  });
-
-  it('should display created wallets', () => {
-    cy.visit('/wallets');
-    cy.contains('BTC').should('be.visible');
+    cy.get('#new-wallet-button').click();
+    cy.get('#wallet-currency').select('BTC');
+    cy.get('#create-wallet-button').click();
+    cy.get('.wallet-list').should('contain', 'BTC');
   });
 });

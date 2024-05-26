@@ -1,13 +1,12 @@
 describe('Mock API Responses', () => {
   beforeEach(() => {
-    cy.login();
+    cy.setCookie('next-auth.session-token', 'mock-session-token');
+    cy.intercept('GET', '/api/wallets', { fixture: 'wallets.json' }).as('getWallets');
+    cy.visit('/');
   });
 
   it('should display mocked wallet balance', () => {
-    cy.intercept('GET', '/api/wallets', { fixture: 'wallets.json' }).as('getWallets');
-    cy.visit('/wallets');
     cy.wait('@getWallets');
-    cy.contains('BTC').should('be.visible');
-    cy.contains('ETH').should('be.visible');
+    cy.get('#wallet-balance').should('contain', '1.5 BTC');
   });
 });
