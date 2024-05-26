@@ -1,16 +1,9 @@
 import NextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import bcrypt from 'bcryptjs';
-import { Client } from 'pg';
+import { PrismaClient } from '@prisma/client';
 
-const client = new Client({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false,
-  },
-});
-
-client.connect();
+const prisma = new PrismaClient();
 
 export const authOptions = {
   providers: [
@@ -22,8 +15,9 @@ export const authOptions = {
       },
       async authorize(credentials) {
         const { username, password } = credentials;
-        const res = await client.query('SELECT * FROM users WHERE username = $1', [username]);
-        const user = res.rows[0];
+        const user = await prisma.user.findUnique({
+          where: { username },
+        });
 
         if (user && bcrypt.compareSync(password, user.password)) {
           return user;
