@@ -13,10 +13,14 @@
     "cypress:run:xvfb": "xvfb-run -a yarn cypress run"
   },
   "dependencies": {
+    "@azure/identity": "^4.2.0",
+    "@azure/keyvault-secrets": "^4.8.0",
     "@prisma/client": "^5.14.0",
     "axios": "^1.7.2",
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.12.1",
     "next": "14.2.3",
     "next-auth": "^4.24.7",
     "pg": "^8.11.5",

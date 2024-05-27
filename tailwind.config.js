@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'wake-forest-gold': '#C5B358',
+        'wake-forest-gold': '#9E7D27',
         'wake-forest-black': '#000000',
       },
     },
